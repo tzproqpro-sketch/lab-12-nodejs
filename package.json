@@ -1,0 +1,13 @@
+{
+  "name": "lab-12-event-loop",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №12: EventEmitter и цикл событий Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "event-loop": "node event-loop-demo.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
