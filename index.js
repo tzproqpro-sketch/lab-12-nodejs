@@ -85,12 +85,12 @@ if (require.main === module) {
   const port = Number(process.env.PORT) || 3000;
   app.start(port);
 
-  // Остановка через 10 секунд проверяет событие server:stopped.
-  setTimeout(() => {
+  process.on('SIGINT', () => {
     app.stop().catch((error) => {
       console.error('Ошибка остановки сервера:', error.message);
+      process.exitCode = 1;
     });
-  }, 10000);
+  });
 }
 
 module.exports = {
